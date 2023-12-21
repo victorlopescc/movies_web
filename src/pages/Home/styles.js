@@ -10,13 +10,13 @@ export const Container = styled.div`
   grid-template-areas:
     "header"
     "content";
-
   > main {
     grid-area: content;
 
     width: 100%;
     max-width: 113.7rem;
     margin: 4.8rem auto;
+
 
     header {
       display: flex;
