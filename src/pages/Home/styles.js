@@ -10,14 +10,13 @@ export const Container = styled.div`
   grid-template-areas:
     "header"
     "content";
+
   > main {
     grid-area: content;
 
     width: 100%;
     max-width: 113.7rem;
     margin: 4.8rem auto;
-
-    overflow-y: auto;
 
     header {
       display: flex;
@@ -31,21 +30,20 @@ export const Container = styled.div`
       }
     }
   }
-
-  > main::-webkit-scrollbar {
-    width: 0.8rem;
-  }
-
-  > main::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    border-radius: 0.8rem;
-  }
 `;
 
 export const Content = styled.div`
   max-height: calc(100vh - 29.7rem);
+  overflow-y: auto;
 
-  
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 0.8rem;
+  }
 `;
 
 export const NewMovie = styled(Link)`
